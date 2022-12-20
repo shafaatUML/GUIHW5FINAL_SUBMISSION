@@ -263,9 +263,11 @@ $('li', $board).droppable({
                 jamaica = "false";
             }
         }
-        if (jamaica == "true") {
+        if (jamaica == "true" && tiles_on_board >= 2) {
             document.getElementById('submit').style.visibility = "visible";
         }
+
+        console.log("tiles after drop: " + tiles_on_board); 
     }
 });
 
@@ -487,6 +489,7 @@ $("#submit").click(function () {
 
     score = 0;
     tiles_on_board = 0;
+    console.log("tiles after submit: " + tiles_on_board); 
     firstTile = "true";
 
     for (var i = 0; i < board_arr.length; i++) {
