@@ -348,7 +348,7 @@ $("#submit").click(function () {
     }
     total_score += score;
     doubleScore = "false";
-    amount = Number(0);
+    amount = 0;
     // update score display
     document.getElementById('score').innerHTML = "<h3>Score: " + total_score + "</h3><p>&nbsp</p>";
     // reset word display
@@ -482,11 +482,12 @@ $("#submit").click(function () {
             });
 
             tiles_on_rack++;
-            score = 0;
-            tiles_on_board = 0;
-            firstTile = "true";
         }
     }
+
+    score = 0;
+    tiles_on_board = 0;
+    firstTile = "true";
 
     for (var i = 0; i < board_arr.length; i++) {
         board_arr[i] = ' ';
