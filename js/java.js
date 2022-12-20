@@ -348,7 +348,7 @@ $("#submit").click(function () {
     }
     total_score += score;
     doubleScore = "false";
-    amount = 0;
+    amount = Number(0);
     // update score display
     document.getElementById('score').innerHTML = "<h3>Score: " + total_score + "</h3><p>&nbsp</p>";
     // reset word display
